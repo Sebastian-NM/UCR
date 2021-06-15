@@ -6,14 +6,26 @@
 package main;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.beans.property.ReadOnlyStringWrapper;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellDataFeatures;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 /**
  * FXML Controller class
@@ -41,8 +53,6 @@ public class FXMLGraphicInterfaceController implements Initializable {
     @FXML
     private Button btnSetKey;
     @FXML
-    private ComboBox<?> cmbStudents;
-    @FXML
     private Text txtInfo;
     @FXML
     private Text txtTitle;
@@ -62,13 +72,28 @@ public class FXMLGraphicInterfaceController implements Initializable {
     private Button btnActionContainsValue;
     @FXML
     private Button btnActionSetKey;
-
+    @FXML
+    private TableView<List<String>> tblHashMap;
+    @FXML
+    private TableColumn<List<String>, String> colKey;
+    @FXML
+    private TableColumn<List<String>, String> colValue;
+    @FXML
+    private ComboBox<?> cmbKeys;
+    @FXML
+    private TextField txf1;
+    @FXML
+    private TextField txf2;
+    @FXML
+    private Text txtSubHeader11;
+    
+    HashMap<String, String> map;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        map = new HashMap();
     }    
 
     @FXML
@@ -128,6 +153,51 @@ public class FXMLGraphicInterfaceController implements Initializable {
 
     @FXML
     private void btnActionSetKey(ActionEvent event) {
+    }
+    
+    public void loadTable(){
+
+        colKey.setCellValueFactory(new Callback<CellDataFeatures<List<String>, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(CellDataFeatures<List<String>, String> data) {
+                return new ReadOnlyStringWrapper(data.getValue().get(0));
+            }
+        });
+
+        colValue.setCellValueFactory(new Callback<CellDataFeatures<List<String>, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(CellDataFeatures<List<String>, String> data) {
+                return new ReadOnlyStringWrapper(data.getValue().get(1));
+            }
+        });
+
+        tblHashMap.setItems(getData());
+    }
+
+    ;
+    
+    public ObservableList<List<String>> getData(){
+
+        
+
+        final ObservableList<List<String>> data = FXCollections.observableArrayList();
+        if (!map.isEmpty()) {
+        
+        
+//            for (int i = ; i < map.size(); i++) {
+//                
+//                List<String> arrayList = new ArrayList<>();
+//                arrayList.add(e.getCourseID());
+//
+//                arrayList.add(Util.Utility.getCourseByID(e.getCourseID()).getName());
+//                arrayList.add(e.getSchedule());
+//                data.add(arrayList);
+//
+//            }
+
+        }
+
+        return data;
     }
     
 }

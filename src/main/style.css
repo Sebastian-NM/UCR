@@ -5,3 +5,20 @@
 .mainFxmlClass {
 
 }
+
+.button{
+    -fx-font: 15px "Lucida Fax";
+    -fx-alignment: CENTER;
+    -fx-background-color: #9099A2;
+    -fx-text-fill: #000000;
+    -fx-font-size:11;
+}
+
+.button:hover {
+    -fx-background-color: #4A5F73;
+}
+
+.button:pressed{
+    -fx-background-color: #1C466D;
+}
+

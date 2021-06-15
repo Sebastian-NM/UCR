@@ -2,15 +2,17 @@
 
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1049.0" style="-fx-background-color: #9099A2;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="main.FXMLGraphicInterfaceController">
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1049.0" style="-fx-background-color: #9099A2;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.FXMLGraphicInterfaceController">
     <stylesheets>
         <URL value="@style.css" />
     </stylesheets>
@@ -32,13 +34,42 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96858f" height="419.0" layoutX="709.0" layoutY="129.0" stroke="#0000000a" strokeType="INSIDE" width="290.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6d7993" height="115.0" layoutX="50.0" layoutY="555.0" stroke="#ab2b2b00" strokeType="INSIDE" width="643.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6d7993" height="115.0" layoutX="709.0" layoutY="555.0" stroke="#ab2b2b00" strokeType="INSIDE" width="290.0" />
-      <Button layoutX="68.0" layoutY="581.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="PUT" />
-      <Button layoutX="231.0" layoutY="581.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="REPLACE" />
-      <Button layoutX="390.0" layoutY="581.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="REMOVE" />
-      <Button layoutX="556.0" layoutY="581.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="SIZE" />
-      <Button layoutX="231.0" layoutY="619.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="CONTAINS KEY" />
-      <Button layoutX="390.0" layoutY="619.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="CONTAINS VALUE" />
-      <Button layoutX="68.0" layoutY="619.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="VALUES" />
-      <Button layoutX="556.0" layoutY="619.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="KEY SET" />
+      <Button fx:id="btnPut" layoutX="68.0" layoutY="581.0" mnemonicParsing="false" onAction="#btnPut" prefHeight="25.0" prefWidth="119.0" text="PUT" />
+      <Button fx:id="btnReplace" layoutX="231.0" layoutY="581.0" mnemonicParsing="false" onAction="#btnReplace" prefHeight="25.0" prefWidth="119.0" text="REPLACE" />
+      <Button fx:id="btnRemove" layoutX="390.0" layoutY="581.0" mnemonicParsing="false" onAction="#btnRemove" prefHeight="25.0" prefWidth="119.0" text="REMOVE" />
+      <Button fx:id="btnSize" layoutX="556.0" layoutY="581.0" mnemonicParsing="false" onAction="#btnSize" prefHeight="25.0" prefWidth="119.0" text="SIZE" />
+      <Button fx:id="btnContainsKey" layoutX="231.0" layoutY="619.0" mnemonicParsing="false" onAction="#btnContainsKey" prefHeight="25.0" prefWidth="119.0" text="CONTAINS KEY" />
+      <Button fx:id="btnContainsValue" layoutX="390.0" layoutY="619.0" mnemonicParsing="false" onAction="#btnContainsValue" prefHeight="25.0" prefWidth="119.0" text="CONTAINS VALUE" />
+      <Button fx:id="btnValues" layoutX="68.0" layoutY="619.0" mnemonicParsing="false" onAction="#btnValues" prefHeight="25.0" prefWidth="119.0" text="VALUES" />
+      <Button fx:id="btnSetKey" layoutX="556.0" layoutY="619.0" mnemonicParsing="false" onAction="#btnSetKey" prefHeight="25.0" prefWidth="119.0" text="SET KEY" />
+      <Button fx:id="btnExit" layoutX="905.0" layoutY="691.0" mnemonicParsing="false" onAction="#btnExit" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #B02F0C;" text="EXIT" textFill="#f8f5f5" />
+      <ComboBox fx:id="cmbStudents" layoutX="742.0" layoutY="273.0" prefHeight="25.0" prefWidth="229.0" promptText="Estudiantes" />
+      <Text fx:id="txtInfo" layoutX="731.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INFO" textAlignment="CENTER" wrappingWidth="251.13671875">
+         <font>
+            <Font name="Constantia" size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtTitle" layoutX="731.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" textAlignment="CENTER" wrappingWidth="251.13671875">
+         <font>
+            <Font name="Constantia" size="35.0" />
+         </font>
+      </Text>
+      <TextField layoutX="742.0" layoutY="381.0" prefHeight="25.0" prefWidth="229.0" />
+      <Text fx:id="txtSubHeader1" layoutX="731.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SubHeader 1" textAlignment="CENTER" wrappingWidth="251.13671875">
+         <font>
+            <Font name="Constantia" size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnActionPut" layoutX="795.0" layoutY="414.0" mnemonicParsing="false" onAction="#btnActionPut" prefHeight="25.0" prefWidth="119.0" text="PUT" />
+      <Button fx:id="btnActionReplace" layoutX="795.0" layoutY="414.0" mnemonicParsing="false" onAction="#btnActionReplace" prefHeight="25.0" prefWidth="119.0" text="REPLACE" />
+      <Button fx:id="btnActionRemove" layoutX="795.0" layoutY="313.0" mnemonicParsing="false" onAction="#btnActionRemove" prefHeight="25.0" prefWidth="119.0" text="REMOVE" />
+      <Text fx:id="txtShowValues" layoutX="728.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Values" textAlignment="CENTER" wrappingWidth="251.13671875">
+         <font>
+            <Font name="Lucida Fax Regular" size="17.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnActionContainsKey" layoutX="794.0" layoutY="414.0" mnemonicParsing="false" onAction="#btnContainsKey" prefHeight="25.0" prefWidth="119.0" text="SEARCH KEY" />
+      <Button fx:id="btnActionContainsValue" layoutX="794.0" layoutY="414.0" mnemonicParsing="false" onAction="#btnActionContainsValue" prefHeight="25.0" prefWidth="119.0" text="SEARCH VALUE" />
+      <Button fx:id="btnActionSetKey" layoutX="794.0" layoutY="414.0" mnemonicParsing="false" onAction="#btnActionSetKey" prefHeight="25.0" prefWidth="119.0" text="SET KEY" />
    </children>
 </AnchorPane>

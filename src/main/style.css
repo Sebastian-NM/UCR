@@ -22,3 +22,14 @@
     -fx-background-color: #1C466D;
 }
 
+.text-field{
+    -fx-font: 15px "Lucida Fax";
+    -fx-alignment: CENTER;
+    -fx-background-color: #7C4966;
+    -fx-text-fill: #000000;
+    -fx-font-size:11;
+}
+
+.text-field:focused{
+    -fx-background-color: #F5D7E8;
+}

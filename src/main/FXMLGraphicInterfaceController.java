@@ -84,10 +84,10 @@ public class FXMLGraphicInterfaceController implements Initializable {
     private TextField txf1;
     @FXML
     private TextField txf2;
-    @FXML
-    private Text txtSubHeader11;
     
     HashMap<String, String> map;
+    @FXML
+    private Text txtSubHeader2;
     /**
      * Initializes the controller class.
      */

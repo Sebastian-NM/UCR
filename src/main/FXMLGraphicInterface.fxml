@@ -72,7 +72,7 @@
       <Button fx:id="btnActionContainsValue" layoutX="708.0" layoutY="465.0" mnemonicParsing="false" onAction="#btnActionContainsValue" prefHeight="25.0" prefWidth="119.0" text="SEARCH VALUE" />
       <Button fx:id="btnActionSetKey" layoutX="836.0" layoutY="452.0" mnemonicParsing="false" onAction="#btnActionSetKey" prefHeight="25.0" prefWidth="119.0" text="SET KEY" />
       <TextField fx:id="txf2" layoutX="742.0" layoutY="377.0" prefHeight="25.0" prefWidth="229.0" />
-      <Text fx:id="txtSubHeader11" layoutX="728.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SubHeader 2" textAlignment="CENTER" wrappingWidth="251.13671875">
+      <Text fx:id="txtSubHeader2" layoutX="728.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SubHeader 2" textAlignment="CENTER" wrappingWidth="251.13671875">
          <font>
             <Font name="Constantia" size="20.0" />
          </font>
